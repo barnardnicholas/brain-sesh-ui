@@ -1,38 +1,203 @@
-.App {
+/* Typography ----------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Girassol&family=Oxygen:wght@300;400;700&display=swap");
+
+/* Normalize - HTML ----------------------------------------*/
+html,
+body {
+  font-family: "Oxygen", sans-serif;
+  text-align: left;
+}
+main {
+  padding: 24px;
+  min-width: 60%;
+}
+a {
+  text-emphasis: none;
+  text-decoration: none;
+  color: unset;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 16px;
+}
+h6 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+p {
+  text-align: justify;
+}
+
+/* Normalize - React ----------------------------------------*/
+
+/* Style Classes ----------------------------------------*/
+
+.deco-text {
+  font-family: "Girassol", cursive;
+  font-size: 2em;
+  margin: 0;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-right {
+  text-align: right;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-justify {
+  text-align: justify;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.color-cream {
+  color: #e2e2e2;
+}
+.color-mint {
+  color: #b7cece;
+}
+.color-blue {
+  color: #5386e4;
+}
+.color-grey {
+  color: #656565;
+}
+.color-burgundy {
+  color: #1c0f13;
+}
+.background-cream {
+  background-color: #e2e2e2;
+}
+.background-mint {
+  background-color: #b7cece;
+}
+.background-blue {
+  background-color: #5386e4;
+}
+.background-grey {
+  background-color: #656565;
+}
+.background-burgundy {
+  background-color: #1c0f13;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.justify-start {
+  justify-content: start;
+}
+.justify-end {
+  justify-content: end;
+}
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.shadow {
+  -webkit-box-shadow: 4px 3px 6px -1px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 4px 3px 6px -1px rgba(0, 0, 0, 0.19);
+  box-shadow: 4px 3px 6px -1px rgba(0, 0, 0, 0.19);
 }
 
-.App-link {
-  color: #61dafb;
+/* Per-Component ----------------------------------------*/
+
+.header-logo-container {
+  padding: 8px 16px;
+  width: 100px;
+}
+.header-text-container {
+  padding: 12px 16px;
+  font-size: 2em;
+}
+.header {
+  border-bottom: 1px solid #656565;
+}
+.card {
+  background-color: #ffffff;
+  padding: 24px;
+  margin: 12px;
+  border: 1px solid #656565;
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsiveness ----------------------------------------*/
+
+/* Portrait Phones - 400ps and down */
+@media only screen and (max-width: 400px) {
+  main {
+    padding: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  .header-logo-container {
+    padding: 16px 16px;
+    width: 66px;
   }
+  .header-text-container {
+    padding: 18px 8px;
+    font-size: 1em;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 401px) {
+  main {
+    padding: 4px;
+  }
+  .header-logo-container {
+    padding: 18px 16px;
+  }
+  .header-text-container {
+    padding: 24px 8px;
+    font-size: 1.5em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  main {
+    padding: 16px 24px;
+    max-width: 800px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

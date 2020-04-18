@@ -5,8 +5,6 @@ import * as firebase from "firebase";
 import * as auth from "../auth/firebase-auth";
 // import * as auth from "../env_variables/env";
 
-const baseURL = "https://dawn-portal.firebaseio.com";
-
 // Initialize Firebase
 firebase.initializeApp(auth.firebaseConfig);
 firebase.analytics();

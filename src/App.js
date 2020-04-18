@@ -1,6 +1,18 @@
 import React, { Component } from "react";
-import "./App.css";
+import { Router } from "@reach/router";
+import { Container, Row, Col } from "react-bootstrap";
+
 import * as api from "./api/api";
+
+// Import Components
+import Home from "./components/pages/Home";
+import StyleGuide from "./components/pages/StyleGuide";
+
+// Import Styling
+
+import "./App.css";
+import Header from "./components/Header";
+import SingleQuiz from "./components/pages/SingleQuiz";
 
 export default class App extends Component {
   state = {
@@ -17,8 +29,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <button onClick={this.getAllQuizzes}>Get</button>
+      <div className="App background-cream">
+        <Header />
+        <Router>
+          <Home path="/" />
+          <StyleGuide path="/styles" />
+          <SingleQuiz path="/quizzes/:quiz_id" />
+        </Router>
       </div>
     );
   }
