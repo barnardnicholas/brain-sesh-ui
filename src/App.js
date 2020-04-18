@@ -34,7 +34,7 @@ export default class App extends Component {
         <Router>
           <Home path="/" />
           <StyleGuide path="/styles" />
-          <SingleQuiz path="/quizzes/:quiz_id" />
+          {/* <SingleQuiz path="/quizzes/:quiz_id" /> */}
         </Router>
       </div>
     );
