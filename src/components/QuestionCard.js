@@ -7,10 +7,10 @@ export default function QuestionCard(props) {
     <section className="card shadow">
       <Container fluid>
         <Row>
-          <Col>
+          <Col xs={2}>
             <h3 className="deco-text">Q</h3>
           </Col>
-          <Col>
+          <Col xs={10}>
             <h3>{question.question_text || "--"}</h3>
           </Col>
         </Row>
