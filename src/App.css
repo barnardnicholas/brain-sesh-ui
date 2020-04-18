@@ -8,6 +8,9 @@ body {
   font-family: "Oxygen", sans-serif;
   text-align: left;
 }
+.App {
+  min-height: 100vh;
+}
 main {
   padding: 24px;
   min-width: 60%;
