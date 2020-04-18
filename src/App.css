@@ -158,6 +158,7 @@ p {
 @media only screen and (max-width: 400px) {
   main {
     padding: 0px;
+    width: 100%;
   }
   .header-logo-container {
     padding: 16px 16px;
@@ -172,6 +173,7 @@ p {
 @media only screen and (min-width: 401px) {
   main {
     padding: 4px;
+    width: 100%;
   }
   .header-logo-container {
     padding: 18px 16px;
@@ -186,7 +188,7 @@ p {
 @media only screen and (min-width: 600px) {
   main {
     padding: 16px 24px;
-    max-width: 800px;
+    width: 800px;
   }
 }
 

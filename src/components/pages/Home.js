@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Container>
       <Row>
-        <Col xs={12}>
+        <Col xs={12} className="flex-row justify-center">
           <main>
             <section className="card shadow">
               <h1>Brain Sesh Home</h1>
