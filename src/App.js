@@ -13,6 +13,7 @@ import StyleGuide from "./components/pages/StyleGuide";
 import "./App.css";
 import Header from "./components/Header";
 import SingleQuiz from "./components/pages/SingleQuiz";
+import AnswerSheet from "./components/pages/AnswerSheet";
 
 export default class App extends Component {
   state = {
@@ -35,6 +36,7 @@ export default class App extends Component {
           <Home path="/" />
           <StyleGuide path="/styles" />
           <SingleQuiz path="/quizzes/:quiz_id" />
+          <AnswerSheet path="quizzes/:quiz_id/answer" />
         </Router>
       </div>
     );
