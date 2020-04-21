@@ -3,6 +3,7 @@ import { Router } from "@reach/router";
 import { Container, Row, Col } from "react-bootstrap";
 
 import * as api from "./api/api";
+import * as dummyData from "./data/dummy-data";
 
 // Import Components
 import Home from "./components/pages/Home";
@@ -28,6 +29,13 @@ export default class App extends Component {
     api.getAllQuizzes(cb);
   };
 
+  postTestQuiz = (data) => {
+    const cb = (data) => {
+      console.dir(data);
+    };
+    api.postQuiz("0001", data, cb);
+  };
+
   render() {
     return (
       <div className="App background-cream">
@@ -38,6 +46,13 @@ export default class App extends Component {
           <SingleQuiz path="/quizzes/:quiz_id" />
           <AnswerSheet path="quizzes/:quiz_id/answer" />
         </Router>
+        <button
+          onClick={() => {
+            this.postTestQuiz(dummyData.testQuiz);
+          }}
+        >
+          Post test Quiz
+        </button>
       </div>
     );
   }

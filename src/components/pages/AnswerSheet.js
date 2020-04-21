@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import * as dummyData from "../../data/dummy-data";
+import RoundAnswers from "../RoundAnswers";
 
 export default class AnswerSheet extends Component {
   state = {
@@ -10,7 +11,7 @@ export default class AnswerSheet extends Component {
     authorUID: "",
     dateCreated: "",
     welcomeText: "",
-    questions: [],
+    rounds: {},
   };
 
   getQuiz = () => {
@@ -18,7 +19,7 @@ export default class AnswerSheet extends Component {
       author,
       author_uid,
       date_created,
-      questions,
+      rounds,
       quiz_id,
       quiz_name,
       welcome_text,
@@ -30,19 +31,13 @@ export default class AnswerSheet extends Component {
       author: author,
       authorUID: author_uid,
       dateCreated: date_created,
-      questions: questions,
+      rounds: rounds,
     });
   };
 
   render() {
-    const {
-      quizName,
-      questions,
-      author,
-      dateCreated,
-      welcomeText,
-    } = this.state;
-    const questionsArr = Object.keys(questions);
+    const { quizName, rounds, author, dateCreated, welcomeText } = this.state;
+    const roundsArr = Object.keys(rounds);
     return (
       <Container>
         <Row>
@@ -55,14 +50,9 @@ export default class AnswerSheet extends Component {
                   <p>{dateCreated}</p>
                   <p>{welcomeText}</p>
                 </section>
-                {questionsArr.map((question) => {
-                  const { question_text } = questions[question];
-                  return (
-                    <section className="card shadow">
-                      <h3>{question_text}</h3>
-                      <input type="text"></input>
-                    </section>
-                  );
+
+                {roundsArr.map((round, idx) => {
+                  return <RoundAnswers round={rounds[round]} key={idx} />;
                 })}
                 <section className="card shadow">
                   <h1>Heading 1</h1>

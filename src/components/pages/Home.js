@@ -16,6 +16,9 @@ export default function Home() {
               <Link to="/quizzes/0001">
                 <h4>Single Quiz</h4>
               </Link>
+              <Link to="/quizzes/0001/answer">
+                <h4>Answer Sheet</h4>
+              </Link>
             </section>
           </main>
         </Col>
