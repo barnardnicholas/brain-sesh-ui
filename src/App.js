@@ -33,7 +33,7 @@ export default class App extends Component {
     const cb = (data) => {
       console.dir(data);
     };
-    api.postQuiz("0001", data, cb);
+    api.postQuiz("testquiz", data, cb);
   };
 
   render() {

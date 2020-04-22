@@ -2,8 +2,8 @@
 import * as firebase from "firebase";
 
 // Auth variables
-// import * as auth from "../auth/firebase-auth";
-import * as auth from "../env_variables/env";
+import * as auth from "../auth/firebase-auth";
+// import * as auth from "../env_variables/env";
 
 // Initialize Firebase
 firebase.initializeApp(auth.firebaseConfig);
